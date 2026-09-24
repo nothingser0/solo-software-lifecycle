@@ -48,6 +48,11 @@ FASE RILIS & PENUTUPAN:
    - Tidak ada koding tanpa DP & kesepakatan tertulis.
    - Tidak ada pointing domain produksi tanpa UAT Pass.
    - Tidak ada serah terima source code/kredensial root tanpa pelunasan 100% dan penandatanganan BAST.
+5. **Wajib Berhenti di Setiap Gerbang (Mandatory Turn-Stopping at Gates)**:
+   - **SETIAP KALI SATU MODUL SELESAI, AGEN WAJIB BERHENTI (END TURN)**.
+   - DILARANG KERAS memborong banyak modul secara otomatis dalam satu giliran interaksi.
+   - Izin pengguna seperti *"isi dulu nanti saya review"* HANYA berlaku untuk satu modul yang sedang aktif, BUKAN tiket kosong untuk mengeksekusi modul-modul berikutnya tanpa henti.
+   - Agen WAJIB menampilkan ringkasan artefak modul yang baru selesai dan meminta persetujuan eksplisit pengguna sebelum melangkah ke modul berikutnya.
 
 ---
 

@@ -126,6 +126,18 @@ Gerbang Modul 04 dinyatakan **LOLOS (PASS)** jika:
 - [x] Dokumen `DESIGN.md` telah diunggah dan aktif sebagai Design System di Stitch.
 - [x] Seluruh layar utama telah di-generate dengan data riil dan 5 state lengkap.
 - [x] Tautan demo interaktif (Clickable Prototype) dapat diklik tanpa dead-end.
-- [x] **Single PIC Klien telah menandatangani persetujuan Design Freeze.**
+- [x] **Single PIC Klien (atau solo developer) telah menandatangani persetujuan Design Freeze.**
 
-*Jika seluruh kriteria terpenuhi, sistem resmi melangkah ke **Modul 05: Arsitektur & Spesifikasi Teknis (PRD & FSD)**.*
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah berkas `DESIGN.md`, `docs/specs/DESIGN_SPEC.md`, dan seluruh layar Stitch selesai di-generate:
+1. **DILARANG KERAS langsung melanjutkan atau memanggil tool untuk Modul 05 dalam giliran (turn) yang sama!**
+2. Tampilkan ringkasan hasil desain kepada pengguna:
+   - Token desain utama di `DESIGN.md` (Warna aksen, font, border)
+   - Tabel inventaris Screen ID Stitch yang berhasil di-generate
+   - Tautan demo interaktif Stitch / live staging preview
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Seluruh layar telah di-generate di Google Stitch dan didokumentasikan di `docs/specs/DESIGN_SPEC.md`. Silakan tinjau prototipenya. Apakah tata letak visual ini disetujui (Design Freeze) sebelum kita melangkah ke Modul 05 (Arsitektur & FSD)?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum melangkah ke Modul 05.

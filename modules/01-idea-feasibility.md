@@ -95,4 +95,16 @@ Hasil akhir dari Modul 01 adalah berkas **`docs/pm/IDEA_BRIEF.md`** yang dibuat 
 > Berkas ini WAJIB disimpan di dalam folder **`docs/pm/`** (bukan di root direktori).
 > Root direktori `./` dicadangkan secara eksklusif hanya untuk 7 berkas kendali AI (Agent Harness) saat Modul 06 dimulai.
 
-Dokumen ini menjadi prasyarat sebelum melangkah ke **Modul 02: Discovery & Scope Definition**.
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah berkas `docs/pm/IDEA_BRIEF.md` selesai ditulis:
+1. **DILARANG KERAS langsung melanjutkan atau memanggil tool untuk Modul 02 dalam giliran (turn) yang sama!**
+2. Tampilkan ringkasan singkat hasil Modul 01 kepada pengguna:
+   - Elevator pitch ide produk
+   - Core loop 3 langkah
+   - Hasil skor kelayakan (Feasibility Scorecard) & skala yang ditetapkan
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Dokumen `docs/pm/IDEA_BRIEF.md` telah selesai disusun dengan skor kelayakan [X/5] dan skala [Tier]. Apakah ringkasan ini sudah sesuai, atau ada poin yang ingin disesuaikan sebelum kita lanjut ke Modul 02 (Discovery & Scope Definition)?"*
+4. Agen HANYA boleh melangkah ke Modul 02 SETELAH pengguna memberikan respon persetujuan (misal: *"ok"*, *"lanjut"*, *"setuju"*). Izin seperti *"isi dulu nanti saya review"* HANYA berlaku untuk Modul 01 ini saja, bukan izin memborong modul berikutnya!

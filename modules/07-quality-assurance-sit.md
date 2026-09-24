@@ -139,6 +139,18 @@ Gerbang Modul 07 dinyatakan **LOLOS (PASS)** jika:
 - [x] SIT dengan seluruh sandbox pihak ketiga (Payment, Vault S3/R2, Email) terbukti berhasil.
 - [x] Audit dependensi `pnpm audit` bebas dari kerentanan kategori High/Critical.
 - [x] Aplikasi telah berhasil di-deploy dan berjalan stabil di server **Staging**.
-- [x] Dokumen **`SIT_REPORT.md`** telah terbit dengan kesimpulan: **READY FOR CLIENT UAT**.
+- [x] Dokumen **`docs/qa/SIT_REPORT.md`** telah terbit dengan kesimpulan: **READY FOR CLIENT UAT**.
 
-*Jika seluruh kriteria terpenuhi, sistem resmi melangkah ke **Modul 08: Data Migration & Seeding** (jika ada data lama klien) atau langsung ke **Modul 09: [GATE VALIDASI] UAT & Sign-Off Klien**.*
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah server Staging aktif dan dokumen `SIT_REPORT.md` terbit:
+1. **DILARANG KERAS langsung melanjutkan atau memanggil tool untuk Modul 08/09 dalam giliran (turn) yang sama!**
+2. Tampilkan ringkasan hasil pengujian integrasi Staging kepada pengguna:
+   - URL Staging yang aktif
+   - Status kelulusan pengujian sandbox pihak ketiga
+   - Hasil audit keamanan dependensi & uji beban k6
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Sistem telah berhasil lolos pengujian integrasi (SIT Pass) dan aktif di server Staging. Apakah hasil pengujian ini disetujui sebelum kita membuka sesi pengujian data/UAT (Modul 08/09)?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum melangkah ke modul berikutnya.

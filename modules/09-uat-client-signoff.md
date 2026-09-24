@@ -86,10 +86,13 @@ Setiap laporan kendala dari klien wajib diklasifikasikan ke dalam 4 tingkatan:
 
 ## 5. Artefak Keluaran (Deliverables)
 
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> Seluruh berkas skenario, log cacat, dan Berita Acara UAT WAJIB disimpan di folder **`docs/pm/`**.
+
 Modul ini menghasilkan 3 berkas pengesahan:
-1. **`UAT_SCENARIOS.md`**: Panduan langkah demi langkah pengujian bagi pengguna awam (menggunakan `templates/uat/UAT_SCENARIOS_TEMPLATE.md`).
-2. **`UAT_DEFECT_LOG.md`**: Tabel pencatatan seluruh temuan kendala selama UAT beserta status perbaikannya (menggunakan `templates/uat/UAT_DEFECT_LOG_TEMPLATE.md`).
-3. **`UAT_SIGNOFF_REPORT.md`**: Berita Acara Hasil UAT resmi bertandatangan Single PIC Klien yang mengesahkan bahwa seluruh fungsi sistem telah diterima (menggunakan `templates/uat/UAT_SIGNOFF_TEMPLATE.md`).
+1. **`docs/pm/UAT_SCENARIOS.md`**: Panduan langkah demi langkah pengujian bagi pengguna awam (menggunakan `templates/uat/UAT_SCENARIOS_TEMPLATE.md`).
+2. **`docs/pm/UAT_DEFECT_LOG.md`**: Tabel pencatatan seluruh temuan kendala selama UAT beserta status perbaikannya (menggunakan `templates/uat/UAT_DEFECT_LOG_TEMPLATE.md`).
+3. **`docs/pm/UAT_SIGNOFF_REPORT.md`**: Berita Acara Hasil UAT resmi bertandatangan Single PIC Klien yang mengesahkan bahwa seluruh fungsi sistem telah diterima (menggunakan `templates/uat/UAT_SIGNOFF_TEMPLATE.md`).
 
 ---
 
@@ -98,6 +101,15 @@ Modul ini menghasilkan 3 berkas pengesahan:
 Gerbang Modul 09 dinyatakan **LOLOS (PASS)** jika dan hanya jika:
 - [x] Seluruh skenario pengujian berstatus **PASS** atau seluruh temuan Severity 1 & 2 telah **RESOLVED**.
 - [x] Permintaan penambahan fitur baru telah dipisahkan secara tertulis ke lembar Change Request.
-- [x] **Single PIC Klien telah menandatangani dokumen `UAT_SIGNOFF_REPORT.md`.**
+- [x] **Single PIC Klien telah menandatangani dokumen `docs/pm/UAT_SIGNOFF_REPORT.md`.**
 
-*Begitu dokumen UAT ditandatangani, branch `staging` diizinkan di-merge ke branch `main`, dan sistem resmi melangkah ke **Modul 10: Deployment & Production Go-Live**.*
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah Berita Acara UAT ditandatangani oleh klien:
+1. **DILARANG KERAS langsung melakukan merge git ke `main`, deployment, atau memanggil tool untuk Modul 10 dalam giliran (turn) yang sama!**
+2. Tampilkan status penutupan UAT (seluruh defect Severity 1 & 2 telah selesai) dan konfirmasi penandatanganan Berita Acara UAT.
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Berita Acara UAT (`docs/pm/UAT_SIGNOFF_REPORT.md`) telah resmi ditandatangani. Sistem telah diizinkan untuk merge ke branch `main`. Apakah Anda siap mengeksekusi peluncuran resmi ke server Produksi di Modul 10 (Deployment & Production Go-Live)?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum memulai proses deployment produksi.

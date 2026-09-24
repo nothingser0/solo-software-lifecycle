@@ -129,6 +129,18 @@ Gerbang Modul 05 dinyatakan **LOLOS (PASS)** jika:
 - [x] Seluruh skema basis data telah ditulis dalam format SQL DDL baku beserta constraints.
 - [x] Seluruh endpoint API telah memiliki kontrak payload JSON dan matriks penanganan error.
 - [x] Pondasi keamanan (enkripsi, hashing, rate limiting) telah didefinisikan secara eksplisit.
-- [x] **Single PIC Klien telah menandatangani lembar persetujuan PRD & FSD.**
+- [x] **Single PIC Klien (atau solo developer) telah menandatangani lembar persetujuan PRD & FSD.**
 
-*Jika seluruh kriteria terpenuhi, sistem resmi memasuki fase eksekusi pengkodean: **Modul 06: Development (Backend, Frontend, Integrasi API)**.*
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah berkas `docs/specs/PRD.md` dan `docs/specs/FSD.md` selesai ditulis:
+1. **DILARANG KERAS langsung melanjutkan, melakukan scaffolding, atau memanggil tool untuk Modul 06 dalam giliran (turn) yang sama!**
+2. Tampilkan ringkasan cetak biru teknis kepada pengguna:
+   - Tech stack & topologi infrastruktur terpilih
+   - Tabel skema database utama (entitas & relasi)
+   - Daftar endpoint API inti
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Dokumen spesifikasi teknis `docs/specs/PRD.md` dan `docs/specs/FSD.md` telah selesai disusun. Apakah arsitektur dan skema database ini disetujui (Technical Sign-Off) sebelum kita memulai scaffolding dan koding di Modul 06?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum memulai Modul 06.

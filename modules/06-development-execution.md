@@ -230,4 +230,16 @@ Gerbang Modul 06 dinyatakan **LOLOS (PASS)** jika:
 - [x] Enkripsi file vault AES-256-GCM berbasis stream berhasil menyimpan dan membaca dokumen via presigned URL.
 - [x] Skrip uji mandiri (`smoke-test`) lulus 100% dan audit dependensi (`pnpm audit`) bebas celah kritis.
 
-*Jika seluruh kriteria terpenuhi, sistem resmi melangkah ke **Modul 07: Quality Assurance (Unit Test, SIT, & Security Audit)**.*
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah koding selesai dan skrip `smoke-test` lulus 100%:
+1. **DILARANG KERAS langsung melanjutkan atau memanggil tool untuk Modul 07 dalam giliran (turn) yang sama!**
+2. Tampilkan ringkasan hasil development lokal kepada pengguna:
+   - Hasil uji kompilasi dan smoke test lokal
+   - Bukti fungsionalitas di `VERIFY_LOCAL.md`
+   - Kesiapan pengujian integrasi Staging (Termin 2 Alpha Release)
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Seluruh fitur inti telah selesai dikoding dan diverifikasi lokal (Smoke Test PASS). Apakah hasil development ini disetujui sebelum kita membuka Modul 07 (Quality Assurance & SIT di Staging)?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum melangkah ke Modul 07.

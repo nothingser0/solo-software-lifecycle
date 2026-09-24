@@ -88,4 +88,16 @@ Hasil akhir dari Modul 02 adalah berkas **`docs/pm/SCOPE_STATEMENT.md`** yang di
 > Berkas ini WAJIB disimpan di dalam folder **`docs/pm/`** (bukan di root direktori).
 > Dilarang meletakkan dokumen lingkup kerja di root proyek.
 
-Dokumen ini menjadi dasar mutlak untuk penyusunan **Kontrak SOW, Penentuan Harga, dan Pembayaran DP pada Modul 03**.
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah berkas `docs/pm/SCOPE_STATEMENT.md` selesai ditulis:
+1. **DILARANG KERAS langsung melanjutkan atau memanggil tool untuk Modul 03 dalam giliran (turn) yang sama!**
+2. Tampilkan ringkasan batasan lingkup kepada pengguna:
+   - Daftar fitur Must-Have (P0)
+   - Daftar tegas fitur Out-of-Scope yang dilarang dibuat
+   - Ketergantungan data/akses dari klien (Dependency SLA)
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Dokumen `docs/pm/SCOPE_STATEMENT.md` telah selesai disusun dengan [X] fitur Must-Have dan batasan Out-of-Scope yang terkunci. Apakah batasan lingkup ini sudah disepakati sebelum kita lanjut ke Modul 03 (Legal SOW & Project Charter)?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum melangkah ke Modul 03.

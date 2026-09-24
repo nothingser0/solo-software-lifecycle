@@ -111,10 +111,13 @@ Dua minggu sebelum masa garansi berakhir, kirimkan surat penawaran pemeliharaan 
 
 ## 5. Artefak Keluaran (Deliverables)
 
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> Seluruh dokumen kebijakan garansi, kontrak retainer, dan laporan insiden WAJIB disimpan di dalam folder **`docs/pm/`**.
+
 Modul ini menghasilkan 3 dokumen tata kelola pemeliharaan:
-1. **`WARRANTY_POLICY.md`**: Dokumen kebijakan resmi batas garansi, jam kerja layanan, dan definisi galat yang dilindungi (menggunakan `templates/maintenance/WARRANTY_POLICY_TEMPLATE.md`).
-2. **`SLA_RETAINER_CONTRACT.md`**: Dokumen kontrak kerja sama pemeliharaan bulanan berulang (*Monthly Retainer Agreement*) (menggunakan `templates/maintenance/SLA_RETAINER_CONTRACT_TEMPLATE.md`).
-3. **`INCIDENT_RESPONSE.md`**: Prosedur standar operasional (SOP) penanganan insiden darurat produksi bagi solo developer (menggunakan `templates/maintenance/INCIDENT_RESPONSE_TEMPLATE.md`).
+1. **`docs/pm/WARRANTY_POLICY.md`**: Dokumen kebijakan resmi batas garansi, jam kerja layanan, dan definisi galat yang dilindungi (menggunakan `templates/maintenance/WARRANTY_POLICY_TEMPLATE.md`).
+2. **`docs/pm/SLA_RETAINER_CONTRACT.md`**: Dokumen kontrak kerja sama pemeliharaan bulanan berulang (*Monthly Retainer Agreement*) (menggunakan `templates/maintenance/SLA_RETAINER_CONTRACT_TEMPLATE.md`).
+3. **`docs/pm/INCIDENT_RESPONSE.md`**: Prosedur standar operasional (SOP) penanganan insiden darurat produksi bagi solo developer (menggunakan `templates/maintenance/INCIDENT_RESPONSE_TEMPLATE.md`).
 
 ---
 
@@ -122,7 +125,13 @@ Modul ini menghasilkan 3 dokumen tata kelola pemeliharaan:
 
 Gerbang Modul 12 dinyatakan **BERHASIL & SIKLUS PROYEK 100% PURNA** jika:
 - [x] Masa garansi 30/60/90 hari kalender telah dilewati tanpa ada sisa tiket Severity 1 & 2 yang menggantung.
-- [x] Klien telah menandatangani lembar penutupan garansi atau telah resmi menandatangani **Kontrak Retainer Bulanan (SLA Agreement)**.
+- [x] Dokumen `docs/pm/WARRANTY_POLICY.md` telah diterbitkan.
+- [x] Klien telah menandatangani lembar penutupan garansi atau telah resmi menandatangani Kontrak Retainer Bulanan (`docs/pm/SLA_RETAINER_CONTRACT.md`).
 - [x] Sistem beroperasi stabil secara mandiri di server produksi dengan pemantauan otomatis aktif.
 
-*Dengan ini, seluruh 12 Rantai Alur Kerja Pengembangan Perangkat Lunak Solo Developer telah lengkap dari hulu (Ide Mentah) hingga hilir (Pemeliharaan Berkelanjutan).*
+---
+
+## 🛑 PROTOKOL PENUTUPAN SIKLUS HIDUP (LIFECYCLE COMPLETION)
+Setelah seluruh tahapan Modul 12 selesai:
+1. Tampilkan ucapan selamat dan rangkuman purna karya kepada pengguna.
+2. **AKHIRI RESPON ANDA (END TURN)**. Seluruh 12 siklus rekayasa perangkat lunak solo developer telah selesai 100%.

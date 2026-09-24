@@ -106,9 +106,12 @@ Tuliskan skrip eksekusi mandiri (misal: `scripts/migrate-data.ts` atau script Py
 
 ## 5. Artefak Keluaran (Deliverables)
 
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> Dokumen rencana migrasi dan laporan rekonsiliasi data WAJIB disimpan di folder **`docs/pm/`**.
+
 Modul ini menghasilkan 3 artefak utama:
-1. **`DATA_MIGRATION_PLAN.md`**: Dokumen pemetaan kolom sumber ke target, aturan transformasi, dan batas kepemilikan data (menggunakan `templates/migration/DATA_MIGRATION_PLAN_TEMPLATE.md`).
-2. **`MIGRATION_RECONCILIATION_REPORT.md`**: Laporan bukti perbandingan jumlah data sumber vs target, daftar baris ditolak, dan lembar persetujuan PIC Klien (menggunakan `templates/migration/RECONCILIATION_REPORT_TEMPLATE.md`).
+1. **`docs/pm/DATA_MIGRATION_PLAN.md`**: Dokumen pemetaan kolom sumber ke target, aturan transformasi, dan batas kepemilikan data (menggunakan `templates/migration/DATA_MIGRATION_PLAN_TEMPLATE.md`).
+2. **`docs/pm/MIGRATION_RECONCILIATION_REPORT.md`**: Laporan bukti perbandingan jumlah data sumber vs target, daftar baris ditolak, dan lembar persetujuan PIC Klien (menggunakan `templates/migration/RECONCILIATION_REPORT_TEMPLATE.md`).
 3. **Database Staging Terisi Data Riil**: Basis data di server Staging yang telah siap digunakan untuk sesi pengujian UAT.
 
 ---
@@ -116,10 +119,19 @@ Modul ini menghasilkan 3 artefak utama:
 ## 6. Kriteria Kelulusan Gerbang (Gate Exit Criteria)
 
 Gerbang Modul 08 dinyatakan **LOLOS (PASS)** jika:
-- [x] Dokumen pemetaan kolom (`DATA_MIGRATION_PLAN.md`) telah disepakati.
+- [x] Dokumen pemetaan kolom (`docs/pm/DATA_MIGRATION_PLAN.md`) telah disepakati.
 - [x] Skrip ETL berhasil mengimpor seluruh data valid tanpa memicu integritas foreign key error.
 - [x] Data sensitif di server Staging telah disanitasi/disamarkan sesuai UU PDP.
 - [x] Seluruh baris gagal telah diekspor ke `rejected-rows.csv` dan diserahkan ke klien.
 - [x] **Single PIC Klien telah menandatangani lembar pengesahan rekonsiliasi data.**
 
-*Jika seluruh kriteria terpenuhi, sistem resmi membuka gerbang pengujian penerimaan pengguna: **Modul 09: [GATE VALIDASI] UAT & Sign-Off Klien di Staging**.*
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah data berhasil dimigrasi dan laporan rekonsiliasi terbit:
+1. **DILARANG KERAS langsung melanjutkan atau memanggil tool untuk Modul 09 dalam giliran (turn) yang sama!**
+2. Tampilkan ringkasan rekonsiliasi data (jumlah baris sukses vs ditolak) kepada pengguna.
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Data telah berhasil dimigrasi ke database Staging dengan akurasi rekonsiliasi terverifikasi. Apakah data ini disetujui (Data Sign-Off) sebelum kita membuka sesi pengujian pengguna di Modul 09 (UAT & Sign-Off)?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum melangkah ke Modul 09.

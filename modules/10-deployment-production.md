@@ -167,10 +167,13 @@ Jika proyek mencakup aplikasi mobile (Flutter / React Native / Native), proses d
 
 ## 5. Artefak Keluaran (Deliverables)
 
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> Dokumen runbook dan laporan go-live WAJIB disimpan di folder **`docs/deploy/`** atau **`docs/pm/`**.
+
 Modul ini menghasilkan 3 dokumen eksekusi:
-1. **`DEPLOYMENT_RUNBOOK.md`**: Panduan langkah demi langkah teknis proses rilis, konfigurasi server, dan variabel lingkungan produksi (menggunakan `templates/deploy/DEPLOYMENT_RUNBOOK_TEMPLATE.md`).
-2. **`ROLLBACK_PLAN.md`**: Prosedur darurat pemulihan jika terjadi kegagalan fatal saat go-live (menggunakan `templates/deploy/ROLLBACK_PLAN_TEMPLATE.md`).
-3. **`GO_LIVE_VERIFICATION_REPORT.md`**: Laporan bukti bahwa domain resmi aktif, SSL aman, database stabil, dan sistem siap dipakai operasional klien (menggunakan `templates/deploy/GO_LIVE_REPORT_TEMPLATE.md`).
+1. **`docs/deploy/DEPLOYMENT_RUNBOOK.md`**: Panduan langkah demi langkah teknis proses rilis, konfigurasi server, dan variabel lingkungan produksi (menggunakan `templates/deploy/DEPLOYMENT_RUNBOOK_TEMPLATE.md`).
+2. **`docs/deploy/ROLLBACK_PLAN.md`**: Prosedur darurat pemulihan jika terjadi kegagalan fatal saat go-live (menggunakan `templates/deploy/ROLLBACK_PLAN_TEMPLATE.md`).
+3. **`docs/pm/GO_LIVE_VERIFICATION_REPORT.md`**: Laporan bukti bahwa domain resmi aktif, SSL aman, database stabil, dan sistem siap dipakai operasional klien (menggunakan `templates/deploy/GO_LIVE_REPORT_TEMPLATE.md`).
 
 ---
 
@@ -184,4 +187,16 @@ Gerbang Modul 10 dinyatakan **LOLOS (PASS)** jika:
 - [x] Uji transaksi nyata pasca-rilis (*PVT*) berhasil 100%.
 - [x] Sistem monitoring uptime dan pelacak error Sentry aktif.
 
-*Begitu sistem resmi Live di Produksi, sistem melangkah ke tahap penutupan komersial dan serah terima: **Modul 11: [GATE PENYERAHAN] Pelunasan, Training, BAST, & Handover Repositori**.*
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah sistem resmi Live di Produksi dan laporan PVT terbit:
+1. **DILARANG KERAS langsung menyerahkan repositori, password root, atau memanggil tool untuk Modul 11 dalam giliran (turn) yang sama!**
+2. Tampilkan status keberhasilan go-live produksi kepada pengguna:
+   - Domain produksi resmi yang aktif
+   - Hasil uji verifikasi transaksi nyata (PVT)
+   - Status pemantauan uptime & error tracker Sentry
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Sistem telah resmi beroperasi di server Produksi (Live). Bukti verifikasi terdokumentasi di `docs/pm/GO_LIVE_VERIFICATION_REPORT.md`. Apakah Anda siap menerbitkan invoice pelunasan dan memulai proses serah terima (Modul 11: Handover & BAST)?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum melangkah ke Modul 11.

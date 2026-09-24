@@ -101,10 +101,14 @@ Dilarang keras mengirimkan password server, master key database, atau API secret
 
 ## 5. Artefak Keluaran (Deliverables)
 
-Modul ini menghasilkan 3 dokumen penutupan:
-1. **`USER_MANUAL.md`**: Buku panduan operasional bagi admin dan staf pengguna sistem (menggunakan `templates/handover/USER_MANUAL_TEMPLATE.md`).
-2. **`HANDOVER_PROTOCOL.md`**: Berita acara teknis transfer kepemilikan repositori Git, daftar akun yang diserahterimakan, dan checklist pelepasan wewenang (menggunakan `templates/handover/HANDOVER_PROTOCOL_TEMPLATE.md`).
-3. **`BAST_REPORT.md`**: Berita Acara Serah Terima sah bermeterai yang mengalihkan hak lisensi/kepemilikan perangkat lunak dan mengaktifkan masa garansi (menggunakan `templates/handover/BAST_TEMPLATE.md`).
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> - Panduan pengguna disimpan di **`docs/USER_MANUAL.md`** (atau di root proyek untuk kemudahan akses staf).
+> - Berita acara transfer dan dokumen BAST WAJIB disimpan di folder **`docs/pm/`**.
+
+Modul ini menghasilkan dokumen penutupan resmi:
+1. **`docs/USER_MANUAL.md`**: Buku panduan operasional bagi admin dan staf pengguna sistem (menggunakan `templates/handover/USER_MANUAL_TEMPLATE.md`).
+2. **`docs/pm/HANDOVER_PROTOCOL.md`**: Berita acara teknis transfer kepemilikan repositori Git, daftar akun yang diserahterimakan, dan checklist pelepasan wewenang (menggunakan `templates/handover/HANDOVER_PROTOCOL_TEMPLATE.md`).
+3. **`docs/pm/BAST.md`**: Berita Acara Serah Terima sah bermeterai Rp 10.000,- yang mengalihkan hak lisensi/kepemilikan perangkat lunak dan mengaktifkan masa garansi (menggunakan `templates/handover/BAST_TEMPLATE.md`).
 4. **Bukti Pembayaran Lunas 100%**: Konfirmasi mutasi bank penerimaan termin final.
 
 ---
@@ -115,7 +119,19 @@ Gerbang Modul 11 dinyatakan **LOLOS (PASS)** jika:
 - [x] **Dana sisa pelunasan (100%) telah masuk dan terkonfirmasi di rekening bank Developer.**
 - [x] Sesi pelatihan staf dan admin telah dilaksanakan sesuai jatah yang disepakati.
 - [x] Repositori Git dan kredensial produksi telah dialihkan ke organisasi Klien.
-- [x] Dokumen `USER_MANUAL.md` telah diserahkan ke klien.
-- [x] **Dokumen BAST resmi bermeterai telah ditandatangani oleh kedua belah pihak.**
+- [x] Dokumen `docs/USER_MANUAL.md` telah diserahkan ke klien.
+- [x] **Dokumen BAST resmi bermeterai (`docs/pm/BAST.md`) telah ditandatangani oleh kedua belah pihak.**
 
-*Dengan lolosnya gerbang ini, fase pengembangan proyek resmi DITUTUP (CLOSED), dan hubungan beralih ke masa pasca-proyek: **Modul 12: Masa Garansi (Bug Fix) & Transisi ke Monthly Retainer / SLA**.*
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah penandatanganan BAST dan serah terima aset:
+1. **DILARANG KERAS langsung menutup sesi atau memanggil tool untuk Modul 12 dalam giliran (turn) yang sama!**
+2. Tampilkan rangkuman penutupan proyek:
+   - Konfirmasi penandatanganan BAST bermeterai
+   - Tanggal mulai dan tanggal berakhir masa garansi resmi
+   - Penawaran paket pemeliharaan (Monthly Retainer SLA)
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Proyek telah resmi diserahterimakan dan ditutup (BAST ditandatangani). Masa garansi resmi berjalan mulai hari ini hingga [Tanggal Berakhir]. Apakah Anda ingin menyusun draf kebijakan garansi dan proposal Monthly Retainer SLA (Modul 12)?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum melangkah ke Modul 12.

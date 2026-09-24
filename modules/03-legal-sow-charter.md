@@ -120,4 +120,16 @@ Gerbang ini dinyatakan **LOLOS (PASS)** jika dan hanya jika:
 - [x] Single PIC Klien telah ditunjuk secara resmi.
 - [x] **Dana Pembayaran DP (Termin 1) telah masuk dan terkonfirmasi di rekening bank Developer** (atau anggaran mandiri telah dialokasikan).
 
-*Jika ketiga syarat di atas terpenuhi, sistem resmi melangkah ke **Modul 04: UI/UX Design & Prototyping**.*
+---
+
+## 🛑 PROTOKOL GERBANG KELUAR & WAJIB BERHENTI (MANDATORY STOP)
+
+Setelah berkas `docs/pm/PROJECT_CHARTER.md` (dan `docs/pm/SOW_CONTRACT.md`) selesai ditulis:
+1. **DILARANG KERAS langsung melanjutkan atau memanggil tool untuk Modul 04 dalam giliran (turn) yang sama!**
+2. Tampilkan ringkasan komitmen kepada pengguna:
+   - Target tanggal rilis go-live
+   - Skema termin pembayaran & nominal DP
+   - Batasan risiko utama
+3. **AKHIRI RESPON ANDA (END TURN)** dan ajukan konfirmasi kepada pengguna:
+   > *"Dokumen `docs/pm/PROJECT_CHARTER.md` telah selesai disusun. Apakah komitmen jadwal dan batas risiko ini sudah disetujui (dan DP telah terkonfirmasi) sebelum kita membuka Modul 04 (UI/UX Google Stitch)?"*
+4. Tunggu respon persetujuan eksplisit dari pengguna sebelum melangkah ke Modul 04.
