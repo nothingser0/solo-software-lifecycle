@@ -2,6 +2,14 @@
 
 Modul ini adalah tahap keempat dalam siklus pengembangan perangkat lunak untuk solo developer. Tujuannya adalah menerjemahkan kebutuhan fungsional dari `SCOPE_STATEMENT.md` menjadi **Sistem Desain Anti-Slop**, **Layar UI Nyata Berbasis Kode**, dan **Prototipe Interaktif Layar Penuh** menggunakan **Google Stitch** sebagai alat tunggal untuk semua skala proyek (Kecil, Menengah, Besar, hingga Enterprise).
 
+> ⛔ **ATURAN MUTLAK ANTI-SHORTCUT (NON-NEGOTIABLE FOR ALL PROJECTS)**:
+> **DILARANG KERAS MENG-SKIP ATAU MENGGANTI GOOGLE STITCH DENGAN WIREFRAME TEKS/MARKDOWN**, baik pada proyek klien, produk mandiri (*solo dev product*), *internal tool*, maupun MVP.
+>
+> **Mengapa Ini Wajib dan Tidak Boleh Di-skip?**
+> 1. **Koneksi Rantai Modul 06**: Google Stitch bukan sekadar untuk demo visual, melainkan menghasilkan **Screen ID dan kode markup/Tailwind nyata**. Pada Modul 06 (Development), agen AI (OpenCode) **WAJIB** memanggil tool MCP `stitch_get_screen` untuk menarik kode komponen tersebut ke dalam repositori.
+> 2. **Pencegahan AI Slop**: Jika layar Stitch di-skip dan hanya diganti deskripsi teks / low-fi wireframe di markdown, pada Modul 06 agen AI akan mengarang styling CSS/HTML dari nol tanpa acuan baku, yang berujung pada tampilan berantakan (*AI Slop*) dan waktu pengerjaan 5x lebih lambat.
+> 3. **Adaptasi untuk Solo Dev Product**: Jika proyek adalah produk mandiri tanpa klien eksternal, Anda sendiri yang bertindak sebagai approver pada lembar *Design Freeze*, namun **pembuatan layar di Google Stitch via `stitch_generate_screen_from_text` TETAP WAJIB DILAKUKAN**.
+
 ---
 
 ## 1. Siklus Eksekusi Modul 04
