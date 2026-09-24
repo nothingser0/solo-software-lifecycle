@@ -113,9 +113,13 @@ Kunci protokol keamanan sebelum menulis kode:
 
 ## 5. Artefak Keluaran (Deliverables)
 
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> Seluruh dokumen spesifikasi Modul 05 WAJIB disimpan di dalam folder **`docs/specs/`** (bukan di root direktori).
+> DILARANG menaruh `PRD.md` atau `FSD.md` di root proyek.
+
 Modul ini menghasilkan 2 dokumen teknis utama:
-1. **`PRD.md`**: Dokumen kebutuhan produk fungsional dan non-fungsional (menggunakan `templates/specs/PRD_FINAL_TEMPLATE.md`).
-2. **`FSD.md`**: Dokumen spesifikasi teknis fungsional, skema database DDL, API contracts, dan arsitektur keamanan (menggunakan `templates/specs/FSD_TECHNICAL_TEMPLATE.md`).
+1. **`docs/specs/PRD.md`**: Dokumen kebutuhan produk fungsional dan non-fungsional (menggunakan `templates/specs/PRD_FINAL_TEMPLATE.md`).
+2. **`docs/specs/FSD.md`**: Dokumen spesifikasi teknis fungsional, skema database DDL, API contracts, dan arsitektur keamanan (menggunakan `templates/specs/FSD_TECHNICAL_TEMPLATE.md`).
 
 ---
 

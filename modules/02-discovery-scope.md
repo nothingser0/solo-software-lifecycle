@@ -82,6 +82,10 @@ Tentukan klausul: *Setiap keterlambatan penyerahan dependensi oleh klien $\ge 3$
 
 ## 4. Artefak Keluaran (Deliverable)
 
-Hasil akhir dari Modul 02 adalah berkas **`SCOPE_STATEMENT.md`** yang dibuat menggunakan template di `templates/discovery/SCOPE_STATEMENT_TEMPLATE.md`.
+Hasil akhir dari Modul 02 adalah berkas **`docs/pm/SCOPE_STATEMENT.md`** yang dibuat menggunakan template di `templates/discovery/SCOPE_STATEMENT_TEMPLATE.md`.
+
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> Berkas ini WAJIB disimpan di dalam folder **`docs/pm/`** (bukan di root direktori).
+> Dilarang meletakkan dokumen lingkup kerja di root proyek.
 
 Dokumen ini menjadi dasar mutlak untuk penyusunan **Kontrak SOW, Penentuan Harga, dan Pembayaran DP pada Modul 03**.

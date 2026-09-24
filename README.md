@@ -76,14 +76,16 @@ Framework ini menyelesaikan masalah di atas dengan **4 Gerbang Pemblokir Mutlak 
    - **Mobile Expo**: `npx create-expo-app@latest .`
 3. **Salin 7 Berkas Kendali AI (Inject Harness)**:
    Salin 7 berkas template dari folder `templates/dev/` repositori ini ke root proyek baru Anda:
-   - `templates/dev/AGENTS_TEMPLATE.md`         $\to$ `AGENTS.md`
+   - `templates/dev/AGENTS_TEMPLATE.md`         $\to$ `AGENTS.md` *(Wajib menimpa AGENTS.md bawaan Next.js 15)*
    - `templates/dev/CONTEXT_TEMPLATE.md`        $\to$ `CONTEXT.md`
    - `templates/dev/ARCHITECTURE_TEMPLATE.md`   $\to$ `ARCHITECTURE.md`
    - `templates/design/DESIGN_MD_TEMPLATE.md`   $\to$ `DESIGN.md`
    - `templates/dev/CONVENTIONS_TEMPLATE.md`    $\to$ `CONVENTIONS.md`
    - `templates/dev/ENV_EXAMPLE_TEMPLATE.md`    $\to$ `.env.example`
    - `templates/dev/TODO_TEMPLATE.md`           $\to$ `TODO.md`
-   - Buat folder `docs/specs/` di proyek Anda dan simpan `PRD.md` serta `FSD.md` di dalamnya.
+   - Simpan dokumen spesifikasi (`PRD.md`, `FSD.md`, `DESIGN_SPEC.md`) di dalam folder **`docs/specs/`**.
+   - Simpan dokumen inisiasi & hukum (`IDEA_BRIEF.md`, `SCOPE_STATEMENT.md`, `PROJECT_CHARTER.md`) di dalam folder **`docs/pm/`**.
+   - *(Dilarang menumpuk dokumen perencanaan di root folder!)*
 4. **Mulai Koding Mandiri (Vibe Coding)**:
    Buka OpenChamber / OpenCode / Cursor di proyek baru Anda, picu AI:
    > *"Baca AGENTS.md dan TODO.md. Mulai kerjakan tugas Fase 1."*

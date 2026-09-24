@@ -101,16 +101,23 @@ Klien korporasi sering memiliki banyak kepala yang saling bertolak belakang arah
 
 ## 4. Artefak Keluaran (Deliverables)
 
-1. **`PROJECT_CHARTER.md`**: Dokumen piagam proyek untuk mengunci objektif, penunjukan Single PIC, dan timeline global (menggunakan template `templates/commercial/PROJECT_CHARTER_TEMPLATE.md`).
-2. **`SOW_CONTRACT.md`**: Dokumen kontrak kerja komersial yang mengikat lingkup, biaya, termin pembayaran, dan klausul hukum (menggunakan template `templates/commercial/SOW_CONTRACT_TEMPLATE.md`).
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> Seluruh berkas Modul 03 WAJIB disimpan di dalam folder **`docs/pm/`** (bukan di root direktori).
+
+1. **`docs/pm/PROJECT_CHARTER.md`**: Dokumen piagam proyek untuk mengunci objektif, penunjukan Single PIC, dan timeline global (menggunakan template `templates/commercial/PROJECT_CHARTER_TEMPLATE.md`).
+2. **`docs/pm/SOW_CONTRACT.md`**: Dokumen kontrak kerja komersial yang mengikat lingkup, biaya, termin pembayaran, dan klausul hukum (menggunakan template `templates/commercial/SOW_CONTRACT_TEMPLATE.md`).
+
+> 💡 **ADAPTASI UNTUK SOLO DEV PRODUCT (PRODUK MANDIRI/INTERNAL)**:
+> Jika proyek adalah produk mandiri tanpa klien eksternal, kontrak komersial dan penagihan DP dapat disesuaikan untuk internal, **NAMUN `docs/pm/PROJECT_CHARTER.md` TETAP WAJIB DIBUAT** untuk mengunci baseline jadwal, anggaran infrastruktur, dan batasan risiko. DILARANG melewatkan (skip) Modul 03 secara total!
 
 ---
 
 ## 5. Kriteria Kelulusan Gerbang (Gate Exit Criteria)
 
 Gerbang ini dinyatakan **LOLOS (PASS)** jika dan hanya jika:
-- [x] Kontrak SOW telah ditandatangani oleh Klien dan Developer.
+- [x] Dokumen `docs/pm/PROJECT_CHARTER.md` telah disahkan.
+- [x] Kontrak SOW telah ditandatangani oleh Klien dan Developer (atau disahkan internal untuk solo product).
 - [x] Single PIC Klien telah ditunjuk secara resmi.
-- [x] **Dana Pembayaran DP (Termin 1) telah masuk dan terkonfirmasi di rekening bank Developer.**
+- [x] **Dana Pembayaran DP (Termin 1) telah masuk dan terkonfirmasi di rekening bank Developer** (atau anggaran mandiri telah dialokasikan).
 
 *Jika ketiga syarat di atas terpenuhi, sistem resmi melangkah ke **Modul 04: UI/UX Design & Prototyping**.*

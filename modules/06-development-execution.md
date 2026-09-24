@@ -135,13 +135,42 @@ Pengkodean bukan hanya tentang "fitur berjalan", melainkan wajib memenuhi 6 stan
 ## 5. Langkah demi Langkah Eksekusi
 
 ### Langkah 1: Setup Repositori & Pemasangan Harness
-1. Inisialisasi proyek bersih di folder kosong:
+
+> ⚠️ **PROTOKOL AMAN SCAFFOLDING JIKA FOLDER SUDAH BERISI `docs/`**:
+> Sejak Modul 01–05 selesai, proyek sudah memiliki folder `docs/pm/` dan `docs/specs/`. Sebagian CLI framework (seperti `create-next-app`) akan menolak membuat proyek jika direktori tidak kosong.
+> **Solusi Eksekusi Aman**:
+> 1. Pindahkan sementara folder `docs/` ke direktori sementara luar (misal: `../_temp_docs`).
+> 2. Jalankan perintah scaffolding framework di root proyek:
+>    ```bash
+>    pnpm create next-app@latest . --typescript --tailwind --app --no-src-dir=false --import-alias "@/*"
+>    ```
+> 3. Kembalikan folder `docs/` ke dalam proyek.
+
+> ⛔ **PERINGATAN KERAS BENTURAN `AGENTS.md` BAWAAN FRAMEWORK**:
+> Saat scaffolding Next.js 15 selesai, Next.js **secara otomatis men-generate file bawaan bernama `AGENTS.md`** (hanya berisi 9 baris peringatan Next.js).
+> **DILARANG KERAS MENGANGGAP `AGENTS.md` SUDAH SELESAI LALU MELEWATKANNYA!**
+> Agen WAJIB **MENIMPA** file tersebut menggunakan `templates/dev/AGENTS_TEMPLATE.md` (dan dapat menyertakan blok Next.js di bagian paling bawah). Seluruh aturan 6 pilar rekayasa, Zod boundary, dan larangan tipe `any` wajib terpasang aktif di `AGENTS.md`.
+
+> 📁 **VERIFIKASI KEBERSIHAN ROOT DIREKTORI**:
+> Pastikan di root direktori (`./`) **HANYA ADA 7 BERKAS HARNESS**:
+> 1. `AGENTS.md`
+> 2. `CONTEXT.md`
+> 3. `ARCHITECTURE.md`
+> 4. `DESIGN.md`
+> 5. `CONVENTIONS.md`
+> 6. `.env.example` (disalin menjadi `.env.local`)
+> 7. `TODO.md`
+>
+> Seluruh dokumen spesifikasi (`PRD.md`, `FSD.md`, `DESIGN_SPEC.md`) WAJIB berada di dalam **`docs/specs/`**.
+> Seluruh dokumen manajemen/hukum (`IDEA_BRIEF.md`, `SCOPE_STATEMENT.md`, `PROJECT_CHARTER.md`) WAJIB berada di dalam **`docs/pm/`**.
+> **DILARANG menumpuk dokumen perencanaan di root folder!**
+
+4. Buat branch staging: `git checkout -b staging`
+5. Lakukan commit awal untuk mengunci harness dan scaffolding:
    ```bash
-   pnpm create next-app@latest . --typescript --tailwind --app --no-src-dir=false --import-alias "@/*"
+   git add .
+   git commit -m "chore: initial project scaffolding with 7 AI harness files"
    ```
-2. Buat branch staging: `git checkout -b staging`
-3. Salin 7 berkas harness AI (`AGENTS.md`, `CONTEXT.md`, `ARCHITECTURE.md`, `DESIGN.md`, `CONVENTIONS.md`, `.env.example`, `TODO.md`) ke root folder.
-4. Buat file `.env.local` terisolasi berdasarkan `.env.example`.
 
 ### Langkah 2: Ekstraksi Komponen Google Stitch via MCP di OpenCode
 1. Instruksikan OpenCode:

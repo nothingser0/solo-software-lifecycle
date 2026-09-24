@@ -89,6 +89,10 @@ Tentukan kategori proyek sejak awal untuk menentukan seberapa berat formalitas d
 
 ## 3. Artefak Keluaran (Deliverable)
 
-Hasil akhir dari Modul 01 adalah berkas **`IDEA_BRIEF.md`** yang dibuat menggunakan template di `templates/ideation/IDEA_BRIEF_TEMPLATE.md`.
+Hasil akhir dari Modul 01 adalah berkas **`docs/pm/IDEA_BRIEF.md`** yang dibuat menggunakan template di `templates/ideation/IDEA_BRIEF_TEMPLATE.md`.
+
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> Berkas ini WAJIB disimpan di dalam folder **`docs/pm/`** (bukan di root direktori).
+> Root direktori `./` dicadangkan secara eksklusif hanya untuk 7 berkas kendali AI (Agent Harness) saat Modul 06 dimulai.
 
 Dokumen ini menjadi prasyarat sebelum melangkah ke **Modul 02: Discovery & Scope Definition**.

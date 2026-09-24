@@ -79,38 +79,43 @@ FASE RILIS & PENUTUPAN:
 
 ---
 
-## 5. Direktori Template
+## 5. Direktori Template & Struktur Penempatan Berkas
+
+> 📁 **ATURAN DISTRIBUSI BERKAS MUTLAK (FOLDER HYGIENE)**:
+> - **Folder `docs/pm/`**: Khusus dokumen inisiasi, lingkup, hukum, dan tata kelola (`IDEA_BRIEF.md`, `SCOPE_STATEMENT.md`, `PROJECT_CHARTER.md`, `SOW_CONTRACT.md`, `BAST.md`, dll.).
+> - **Folder `docs/specs/`**: Khusus dokumen spesifikasi teknis dan antarmuka (`PRD.md`, `FSD.md`, `DESIGN_SPEC.md`).
+> - **Root Direktori (`./`)**: DICADANGKAN SECARA EKSKLUSIF HANYA UNTUK 7 BERKAS HARNESS AI (`AGENTS.md`, `CONTEXT.md`, `ARCHITECTURE.md`, `DESIGN.md`, `CONVENTIONS.md`, `.env.example`, `TODO.md`), `README.md`, dan konfigurasi framework. **Dilarang menaruh dokumen perencanaan di root!**
 
 ### Jalur Cepat (Fast-Track Mode)
-- `templates/fast-track/PROJECT_LITE_TEMPLATE.md`: Template spesifikasi ramping terpadu (Ide + Scope + Komersial + Skema DB) untuk proyek MVP 1–4 minggu. *(Catatan: Modul 04 Google Stitch tetap wajib untuk Web/Mobile).*
+- `templates/fast-track/PROJECT_LITE_TEMPLATE.md`: Template spesifikasi ramping terpadu (Ide + Scope + Komersial + Skema DB) untuk proyek MVP 1–4 minggu. Disimpan di root (`./PROJECT_LITE.md`). *(Catatan: Modul 04 Google Stitch tetap wajib untuk Web/Mobile).*
 
 ### Modul 01 (Aktif)
-- `templates/ideation/IDEA_BRIEF_TEMPLATE.md`: Template ringkasan ide, perumusan elevator pitch, 3-filter triage, dan kartu skor kelayakan solo dev.
+- `templates/ideation/IDEA_BRIEF_TEMPLATE.md`: Disimpan ke **`docs/pm/IDEA_BRIEF.md`** (Ringkasan ide, elevator pitch, 3-filter triage, skor kelayakan).
 
 ### Modul 02 (Aktif)
-- `templates/discovery/SCOPE_STATEMENT_TEMPLATE.md`: Template kesepakatan lingkup proyek, breakdown fitur MoSCoW, matriks RBAC, batas Out-of-Scope, dan dependensi SLA.
+- `templates/discovery/SCOPE_STATEMENT_TEMPLATE.md`: Disimpan ke **`docs/pm/SCOPE_STATEMENT.md`** (Kesepakatan lingkup MoSCoW, RBAC, batas Out-of-Scope, dependensi SLA).
 
 ### Modul 03 (Aktif)
-- `templates/commercial/PROJECT_CHARTER_TEMPLATE.md`: Piagam proyek pengunci wewenang Single PIC, objektif bisnis, dan milestone global.
-- `templates/commercial/SOW_CONTRACT_TEMPLATE.md`: Perjanjian kerja sama legal, klausul termin pembayaran, liability cap, retensi IP, dan aturan Change Request.
+- `templates/commercial/PROJECT_CHARTER_TEMPLATE.md`: Disimpan ke **`docs/pm/PROJECT_CHARTER.md`** (Wewenang Single PIC, objektif bisnis, milestone global). *(Wajib dibuat juga untuk solo dev product)*.
+- `templates/commercial/SOW_CONTRACT_TEMPLATE.md`: Disimpan ke **`docs/pm/SOW_CONTRACT.md`** (Perjanjian komersial legal, termin pembayaran, liability cap).
 
 ### Modul 04 (Aktif)
-- `templates/design/DESIGN_MD_TEMPLATE.md`: Template sistem desain anti-slop untuk diunggah ke Google Stitch via `stitch_upload_design_md`.
-- `templates/design/DESIGN_SPEC_TEMPLATE.md`: Spesifikasi desain antarmuka, sitemap rute URL, katalog Screen ID Google Stitch, dan lembar pembekuan desain (*Design Freeze*).
+- `templates/design/DESIGN_MD_TEMPLATE.md`: Disimpan ke root (**`./DESIGN.md`**) sebagai token visual anti-slop Google Stitch.
+- `templates/design/DESIGN_SPEC_TEMPLATE.md`: Disimpan ke **`docs/specs/DESIGN_SPEC.md`** (Arsitektur informasi, rute URL, Screen ID Google Stitch 100% lengkap, lembar Design Freeze).
 
 ### Modul 05 (Aktif)
-- `templates/specs/PRD_FINAL_TEMPLATE.md`: Dokumen spesifikasi kebutuhan produk resmi (fungsional, matriks RBAC, metrik KPI, batasan NFR).
-- `templates/specs/FSD_TECHNICAL_TEMPLATE.md`: Dokumen spesifikasi teknis arsitektur (ERD, SQL DDL baku, kontrak API JSON request/response, dan security blueprint).
+- `templates/specs/PRD_FINAL_TEMPLATE.md`: Disimpan ke **`docs/specs/PRD.md`** (Spesifikasi produk resmi, matriks RBAC, metrik KPI, batasan NFR).
+- `templates/specs/FSD_TECHNICAL_TEMPLATE.md`: Disimpan ke **`docs/specs/FSD.md`** (Spesifikasi teknis arsitektur, ERD, SQL DDL baku, kontrak API JSON, security blueprint).
 
-### Modul 06 (Aktif)
-- `templates/dev/AGENTS_TEMPLATE.md`: Template aturan kendali mutlak AI coding agent (OpenCode / OpenChamber).
-- `templates/dev/CONTEXT_TEMPLATE.md`: Template konteks bisnis, peran user, dan batasan Out-of-Scope untuk AI agent.
-- `templates/dev/ARCHITECTURE_TEMPLATE.md`: Template cetak biru arsitektur, struktur folder, dan skema database untuk AI agent.
-- `templates/dev/CONVENTIONS_TEMPLATE.md`: Template konvensi gaya kode (kebab-case, Server Components, no barrel files).
-- `templates/dev/ENV_EXAMPLE_TEMPLATE.md`: Template kamus variabel lingkungan baku (.env.example).
-- `templates/dev/TODO_TEMPLATE.md`: Template daftar tugas atomik koding mandiri untuk AI agent.
-- `templates/dev/RUNBOOK_LOCAL_TEMPLATE.md`: Panduan lokal developer (setup environment variables, perintah migrasi, seed fixtures, dan smoke test).
-- `templates/dev/VERIFY_LOCAL_TEMPLATE.md`: Checklist verifikasi mandiri sebelum push ke staging (build status, API endpoint check, UI 5-state test, dan security sanity).
+### Modul 06 (Aktif - 7 Root Harness Files)
+- `templates/dev/AGENTS_TEMPLATE.md`: Disimpan ke root (**`./AGENTS.md`**) — *WAJIB MENIMPA AGENTS.md bawaan framework (seperti Next.js 15), dilarang di-skip!*
+- `templates/dev/CONTEXT_TEMPLATE.md`: Disimpan ke root (**`./CONTEXT.md`**) — Ringkasan bisnis & batasan Out-of-Scope.
+- `templates/dev/ARCHITECTURE_TEMPLATE.md`: Disimpan ke root (**`./ARCHITECTURE.md`**) — Ringkasan FSD teknis untuk konsumsi AI.
+- `templates/dev/CONVENTIONS_TEMPLATE.md`: Disimpan ke root (**`./CONVENTIONS.md`**) — Konvensi gaya kode (kebab-case, Server Components, no barrel).
+- `templates/dev/ENV_EXAMPLE_TEMPLATE.md`: Disimpan ke root (**`./.env.example`**) — Kamus variabel lingkungan baku.
+- `templates/dev/TODO_TEMPLATE.md`: Disimpan ke root (**`./TODO.md`**) — Antrean tugas koding atomik AI berurutan.
+- `templates/dev/RUNBOOK_LOCAL_TEMPLATE.md`: Disimpan ke **`docs/RUNBOOK_LOCAL.md`** atau root.
+- `templates/dev/VERIFY_LOCAL_TEMPLATE.md`: Disimpan ke **`docs/VERIFY_LOCAL.md`** atau root.
 
 ### Modul 07 (Aktif)
 - `templates/qa/TEST_PLAN_SIT_TEMPLATE.md`: Template rencana pengujian integrasi sistem (SIT) terhadap layanan pihak ketiga di Staging.

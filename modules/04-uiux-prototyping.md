@@ -54,10 +54,19 @@ Modul ini menghasilkan 4 deliverable konkret:
 
 | No | Nama Artefak | Format / Lokasi | Deskripsi & Fungsi |
 | :---: | :--- | :--- | :--- |
-| **1** | **`DESIGN.md`** | File Markdown di root proyek | Token desain dan aturan guardrail anti-slop yang diunggah ke Google Stitch sebagai acuan visual seluruh layar. |
-| **2** | **`DESIGN_SPEC.md`** | File Markdown di root proyek | Ringkasan arsitektur informasi, sitemap rute URL, daftar Screen ID di Stitch, dan matriks 5 state layar. |
+| **1** | **`DESIGN.md`** | Root proyek (`./DESIGN.md`) | Token desain dan aturan guardrail anti-slop yang diunggah ke Google Stitch (bagian dari 7 berkas harness AI). |
+| **2** | **`docs/specs/DESIGN_SPEC.md`** | Folder `docs/specs/` | Ringkasan arsitektur informasi, sitemap rute URL, daftar Screen ID di Stitch, dan matriks 5 state layar. |
 | **3** | **Interactive Prototype** | Tautan Live Staging Web / Stitch Viewer | Aplikasi antarmuka nyata yang bisa diklik tombolnya, diketik form-nya, dan diuji alur kerjanya oleh klien. |
-| **4** | **Design Freeze Sign-Off** | Lembar bertandatangan di `DESIGN_SPEC.md` | Berita acara persetujuan tertulis dari Single PIC Klien yang mengunci struktur visual sebelum koding backend dimulai. |
+| **4** | **Design Freeze Sign-Off** | Lembar bertandatangan di `docs/specs/DESIGN_SPEC.md` | Berita acara persetujuan tertulis dari Single PIC Klien yang mengunci struktur visual sebelum koding backend dimulai. |
+
+> 📁 **ATURAN LOKASI BERKAS MUTLAK**:
+> - `DESIGN.md` ditaruh di root (`./DESIGN.md`) karena berfungsi sebagai berkas kendali AI saat koding (Modul 06).
+> - `DESIGN_SPEC.md` WAJIB ditaruh di **`docs/specs/DESIGN_SPEC.md`**. DILARANG menaruhnya di root direktori.
+>
+> ⚠️ **PENANGANAN KENDALA TOOL GOOGLE STITCH**:
+> Jika pemanggilan tool Stitch (`stitch_create_project` atau `stitch_generate_screen_from_text`) mengalami kegagalan autentikasi atau jaringan:
+> - **DILARANG KERAS membuat keputusan sepihak "skip Stitch / implement directly in code"**!
+> - Periksa apakah API Key Stitch telah terpasang dengan benar di konfigurasi MCP (`opencode.json` / `STITCH_API_KEY`). Laporkan kendala teknis kepada pengguna untuk memastikan koneksi Stitch pulih, bukan mengambil jalan pintas memotong fase desain.
 
 ---
 
