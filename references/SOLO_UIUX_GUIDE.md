@@ -21,11 +21,11 @@ Solo developer dilarang membuang waktu membuat komponen primitif dari nol atau m
    - Deploy instan ke Vercel atau Cloudflare Pages sebagai live demo interaktif untuk klien.
 
 ### 1.2 Matriks Penggunaan Stitch Sesuai Skala:
-| Skala | Cakupan di Google Stitch | Output Demo ke Klien |
+| Skala | Cakupan Layar di Google Stitch | Output Demo |
 | :--- | :--- | :--- |
-| **Kecil (MVP)** | 3–5 layar (Happy path + Empty state) | Tautan Live Staging Vercel instan |
-| **Menengah (B2B SaaS)** | 8–15 layar lengkap dengan varian 5 state | Live Staging Web interaktif penuh |
-| **Besar & Enterprise** | 20+ layar mencakup seluruh user role & permission | Live Staging Web + Audit Kepatuhan Aksesibilitas WCAG AA |
+| **Kecil (MVP / Freelance)** | **100% seluruh halaman** dalam Scope (tanpa pengurangan) | Tautan Live Staging Vercel instan |
+| **Menengah (B2B SaaS)** | **100% seluruh halaman** lengkap dengan varian 5 state | Live Staging Web interaktif penuh |
+| **Besar & Enterprise** | **100% seluruh halaman** mencakup seluruh user role & permission | Live Staging Web + Audit Kepatuhan Aksesibilitas WCAG AA |
 
 ---
 

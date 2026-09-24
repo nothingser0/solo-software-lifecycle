@@ -63,15 +63,16 @@
 
 ---
 
-## 5. Inventaris Layar Google Stitch & Matriks 5 State
+## 5. Inventaris Lengkap Seluruh Layar (Exhaustive Screen Inventory - 100% Coverage)
 
-Untuk setiap layar utama, catat ID layar Google Stitch dan verifikasi ketersediaan 5 kondisi antarmuka:
+> **ATURAN CAKUPAN MUTLAK**: Tabel ini WAJIB mencakup **100% seluruh halaman/layar** yang telah didefinisikan pada batasan lingkup (`SCOPE_STATEMENT.md` / `PRD.md`) dari awal hingga akhir tanpa terkecuali. Jika dalam lingkup terdapat 10, 20, atau 100 halaman, seluruhnya WAJIB didaftarkan dan di-generate di Google Stitch dengan Screen ID unik masing-masing. DILARANG memangkas atau hanya memilih sebagian sampel layar.
 
 | Kode Layar | Nama Layar | Google Stitch Screen ID | Default State | Loading Skeleton | Empty State | Error State |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
 | **SCR-01** | Dashboard | `screens/[ID_01]` | Widget statistik & tabel | Skeleton bar abu-abu | Banner "Belum ada dokumen" + CTA buat | Banner server timeout |
 | **SCR-02** | Form Dokumen | `screens/[ID_02]` | Input form dinamis terstruktur | Tombol submit disable + loader | - | Pesan teks merah inline |
 | **SCR-03** | Detail & Sign | `screens/[ID_03]` | Preview PDF + kotak tanda tangan | Skeleton render dokumen | - | Alert gagal verifikasi hash |
+| **SCR-..** | [Seluruh Layar Lain] | `screens/[ID_..]` | [Wajib isi 100% tanpa ada yang di-skip] | ... | ... | ... |
 
 ---
 

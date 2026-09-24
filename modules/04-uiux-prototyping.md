@@ -78,23 +78,24 @@ Gunakan template di `templates/design/DESIGN_MD_TEMPLATE.md`:
 3. Terapkan design system tersebut ke project:
    `stitch_create_design_system_from_design_md(projectId="...", ...)`
 
-### Langkah 3: Generasi Layar Berbasis Data Riil (No Lorem Ipsum)
-Panggil `stitch_generate_screen_from_text` untuk setiap halaman yang tertera di `SCOPE_STATEMENT.md`:
+### Langkah 3: Generasi Seluruh Layar Tanpa Terkecuali (100% Exhaustive Coverage)
+Panggil `stitch_generate_screen_from_text` untuk **SETIAP halaman** yang tertera di `SCOPE_STATEMENT.md` dari awal hingga akhir:
+- **DILARANG KERAS MEMANGKAS CAKUPAN LAYAR**: Jika proyek memiliki 10, 25, 50, atau 100 halaman dalam lingkupnya, **seluruh halaman tersebut WAJIB di-generate di Google Stitch**. Dilarang keras hanya men-generate 3–4 layar contoh sebagai sampel.
 - Sertakan konteks data bisnis nyata Indonesia (format rupiah, istilah hukum/bisnis, nama kota).
 - Wajib meminta state defensif: minta layar *Empty State* dan *Loading Skeleton*.
-- Catat `screen_id` dari setiap layar yang berhasil di-generate.
+- Catat `screen_id` dari **setiap layar** yang berhasil di-generate ke dalam tabel inventaris di `DESIGN_SPEC.md`.
 
-### Langkah 4: Merakit Clickable Demo
-1. Ambil kode HTML/CSS komponen dari Stitch.
+### Langkah 4: Merakit Clickable Demo Lengkap
+1. Ambil kode HTML/CSS komponen dari Stitch untuk seluruh layar.
 2. Pasang tag hyperlink routing standar untuk menghubungkan alur tombol:
    - Tombol "Login" $\to$ mengarahkan ke `/dashboard`
    - Tombol "Buat Dokumen Baru" $\to$ mengarahkan ke `/documents/new`
    - Tombol "Simpan Draf" $\to$ menampilkan modal/toast sukses dan mengarahkan ke `/documents/:id`
-3. Deploy kode ke staging URL gratis (Vercel / Cloudflare Pages) agar dapat dibuka langsung oleh klien di HP maupun laptop.
+3. Deploy kode ke staging URL gratis (Vercel / Cloudflare Pages) agar dapat dibuka langsung oleh klien di HP maupun laptop untuk menguji alur utuh 100%.
 
 ### Langkah 5: Walk-Through & Pembekuan Desain (Design Freeze)
-1. Jadwalkan demo 30 menit bersama **Single PIC Klien**.
-2. Biarkan klien mencoba mengklik dan mengetik form di live demo.
+1. Jadwalkan demo bersama **Single PIC Klien** (atau self-review untuk solo product).
+2. Biarkan klien mencoba mengklik dan mengetik form di live demo untuk seluruh layar.
 3. Kunci persetujuan tertulis: *Tata letak visual dan alur navigasi resmi DIBEKUKAN (FROZEN). Perubahan layout di kemudian hari masuk skema Change Request (CR).*
 
 ---
@@ -103,7 +104,7 @@ Panggil `stitch_generate_screen_from_text` untuk setiap halaman yang tertera di 
 
 | Parameter | Skala Kecil (MVP / Freelance) | Skala Menengah (B2B SaaS / Agensi) | Skala Besar & Enterprise |
 | :--- | :--- | :--- | :--- |
-| **Jumlah Layar** | 3–5 layar inti (Happy path + Empty) | 8–15 layar mencakup seluruh alur | 20+ layar mencakup seluruh peran pengguna |
+| **Cakupan Layar** | **100% seluruh halaman** dalam Scope (tanpa pengurangan) | **100% seluruh halaman** dalam Scope (tanpa pengurangan) | **100% seluruh halaman** dalam Scope (tanpa pengurangan) |
 | **Media Demo** | Tautan Viewer Stitch / Live Preview | Live Staging Web (Vercel/Cloudflare) | Live Staging Web + Dokumen Audit Aksesibilitas |
 | **Kepatuhan Desain** | Kontras visual standar $\ge 4.5:1$ | WCAG AA terverifikasi pada form | Full WCAG AA audit (Keyboard nav, Screen reader) |
 | **Approval** | Konfirmasi tertulis email/chat | Tanda tangan lembar Design Freeze | Formal Design Sign-Off & Berita Acara Review UI |
